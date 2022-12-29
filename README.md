@@ -1,3 +1,3 @@
 # Multithreaded-WebServer
 
-From the rust book 
+Basic rust webserver with multithreading 
