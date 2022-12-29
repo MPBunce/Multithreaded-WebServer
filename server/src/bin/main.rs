@@ -14,7 +14,7 @@ fn main() {
 
     let pool = ThreadPool::new(4);
 
-    for stream in listener.incoming() {
+    for stream in listener.incoming().take(2) {
 
         let _stream = stream.unwrap();
         pool.execute(|| {
@@ -22,6 +22,8 @@ fn main() {
         });
 
     }
+
+    println!("Shutting down.")
 
 }
 
